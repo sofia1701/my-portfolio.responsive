@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .page {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    background-color: #333;
+    height: 80px;
+  }
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 15px ;
+    text-decoration: none;
+    min-height: 28px;
+    min-width: 38px;
+  }
+  .topnav a:hover {
+    background-color: #F09A9D;
+    color: #333;
+}
+.topnav a.active {
+    background-color: #B2D6FF;
+    color: white;
+}
+  
+.header {
+    background-color: #F09A9D;
+    color: #333;
+    text-transform: capitalize;
+}
+.header:hover {
+  opacity: 0.7;
+  color: black;
+}
+  
+.content {
+    background-color: #EAEDF0;
+    height: 600px;
+    color: #333;
+
+}
+
+article {
+    padding: 20px 20px 20px 20px;
+    line-height: 25px;
+}
+  
+.typeform {
+    background-color: #B2D6FF;
+}
+
+#searchbar {
+    min-height: 48px;
+    min-width: 48px;         
+}
+    
+.searchbutton {
+    border-radius: 4px;
+    color: white;
+    background-color: #333;
+    padding: 5px 5px 5px 5px;
+    min-height: 48px;
+    min-width: 48px;
+} 
+.searchbutton:hover {
+    animation-name: background-color;
+    animation-fill-mode: forwards;
+    background-color: white;
+    
+}
+  @keyframes background-color {
+    100% {
+      background-color: #EAEDF0;
+      color: #333;
+    }
+  }
+  
+img {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+img:hover {
+  opacity: 0.7;
+}
+.link {
+  background-color: #F09A9D;
+  height: 80px;
+  
+}
+.linkk {
+  color: #333;
+}
+.linkk:hover {
+  opacity: 0.7;
+}
+  
+  
+  /* Mobile Styles */
+  @media only screen and (max-width: 400px) {
+    body {
+      background-color: #F09A9D; /* Red */
+    }
+    .link {
+      background-color: #EAEDF0;
+    }
+  }
+  
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    .typeform,
+    .feature-1,
+    .feature-2,
+    .feature-3 {
+        width: 50%;
+    
+  }
+  .typeform {
+    order: 2;
+  }
+  .link {
+    
+    order: 3;
+  }
+}
+  
+  /* Desktop Styles */
+  
+    @media only screen and (min-width: 961px) {
+        .page {
+          width: 960px;
+          margin: 0 auto;
+        }
+        .feature-1,
+        .feature-2,
+        .feature-3 {
+          width: 33.3%;
+        }
+        .header {
+          height: 400px;
+        }
+        .typeform {
+            height: 200px;
+            order: 2;
+        }
+        .content {
+            order: 1;
+          
+          }
+        .link {
+          order:3
+        }
+        
+      }
+  
+  
