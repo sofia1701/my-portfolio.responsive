@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
-    <link rel='stylesheet' href='contact-for-styles.css'/>
+    <link rel='stylesheet' type="text/css" href='contact-for-styles.css'/>
 </head>
 <body>
   <div class='page'>
@@ -28,13 +28,13 @@
     </div>
 
     <div class="section form">
-      <form action="/my-form-page" method="post">
+      <form id = "form" action="/my-form-page" method="post">
         <div class="row">
           <div class="col-25">
             <label for="name">Name</label>
           </div>
           <div class="col-75">
-            <input type="text" id="name" name="name" placeholder="Your name..">
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
           </div>
         </div>
         <div class="row">
@@ -42,7 +42,7 @@
             <label for="email">Email</label>
           </div>
           <div class="col-75">
-            <input type="text" id="email" name="email" placeholder="Your email..">
+            <input type="text" id="email" name="email" placeholder="Your email.." required>
           </div>
         </div>
         <div class="row">
@@ -54,13 +54,13 @@
           </div>
         </div>
         <div class="row">
-          <input type="submit" value="Submit">
+          <input id="submit" type="button" value="Submit">
+          
         </div>
         <div class="row">
-          <input type="reset" value="Reset">
+          <input id="reset" type="reset" value="Reset">
         </div>
-      
-      </form>
+     </form>
 
     </div>
 
@@ -69,6 +69,47 @@
     </div>
 
   </div>
+  <script>
+
+    const form = document.getElementById("form");      
+    const clickSubmit = document.getElementById("submit");       
+    const clickReset = document.getElementById("reset"); 
+
+    clickSubmit.addEventListener("click", Submit);
+    clickReset.addEventListener("click", Reset);
+    
+    function Submit(){
+
+      const newName = document.getElementById("name").value;
+      const newEmail = document.getElementById("email").value;
+      const newMessage = document.getElementById("message").value;
+      
+      if (newName == ""){
+
+        alert("Please, add your name.");
+        return false;
+      }
+      if (newEmail  == "") {
+        alert("Please, add your email.");
+        return false;
+      } 
+      if (newMessage == ""){
+        alert("Please, add your message.");
+        return false;
+      } 
+      if (newName != "" || newEmail  != "" || newMessage != "") {
+        alert(newName + "," + newEmail + "," + newMessage);
+        form.submit();
+        }
+    }
+    function Reset(){
+      if (confirm("Please, press OK to erase your form.")){
+        alert("Form sucessfully erased!")
+        return false;
+      }
+    }
+
+  </script>
 
 
 </body>
