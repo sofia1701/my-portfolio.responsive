@@ -34,10 +34,10 @@
     background-color: #F09A9D;
     color: #333;
 }
-.topnav a.active {
-    background-color: #B2D6FF;
-    color: white;
-}
+ /* .topnav a.active {
+  background-color: #B2D6FF;
+  color: white;
+}*/
   
 .header {
     background-color: #F09A9D;
@@ -48,7 +48,84 @@
   opacity: 0.7;
   color: black;
 }
+
+/*FORM*/
+.form {
+  background-color: #B2D6FF;
+  height: 600px;
+  color: #333;
+  border-radius: 5px;
   
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=button],[type=reset] {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border: #EAEDF0;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  width: 75%;
+  
+}
+
+input[type=button]:hover {
+  animation-name: background-color;
+  animation-fill-mode: forwards;
+  background-color: white;
+}
+@keyframes background-color {
+  100% {
+    background-color: #EAEDF0;
+    color: #333;
+  }
+}
+input[type=reset]:hover {
+  animation-name: background-color;
+  animation-fill-mode: forwards;
+  background-color: white;
+}
+@keyframes background-color {
+  100% {
+    background-color: #EAEDF0;
+    color: #333;
+  }
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*END FORM*/
+
 .content {
     background-color: #EAEDF0;
     height: 600px;
@@ -77,6 +154,7 @@ article {
     padding: 5px 5px 5px 5px;
     min-height: 48px;
     min-width: 48px;
+    width: 100%;
 } 
 .searchbutton:hover {
     animation-name: background-color;
@@ -137,6 +215,15 @@ img:hover {
     
     order: 3;
   }
+  form {
+    width: 70%;
+    margin-top: 0;
+  }
+  .col-25, .col-75, input[type=button], input[type=reset] {
+    width: 100%;
+    margin-top: 0;
+  }
+
 }
   
   /* Desktop Styles */
@@ -164,6 +251,14 @@ img:hover {
           }
         .link {
           order:3
+        }
+        form {
+          width: 70%;
+          margin-top: 0;
+        }
+        .col-25, .col-75, input[type=button], input[type=reset] {
+          width: 100%;
+          margin-top: 0;
         }
         
       }
