@@ -126,12 +126,35 @@ input[type=reset]:hover {
 
 /*END FORM*/
 
+
+
 .content {
     background-color: #EAEDF0;
     height: 600px;
     color: #333;
 
 }
+/*Card*/
+.cards {
+  background-color: #EAEDF0;
+  color: #333;
+  padding: 20px 20px 20px 20px;
+  height: 400px;
+}
+.card {
+  padding: 20px 20px 20px 20px;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container {
+  padding: 2px 16px;
+}
+
+/*END Card*/
 
 article {
     padding: 20px 20px 20px 20px;
@@ -197,19 +220,29 @@ img:hover {
     .link {
       background-color: #EAEDF0;
     }
+    .feature-4,
+    .feature-5 {
+      background-color: #EAEDF0;
+    }
   }
   
   /* Tablet Styles */
   @media only screen and (min-width: 401px) and (max-width: 960px) {
-    .typeform,
+    
     .feature-1,
     .feature-2,
     .feature-3 {
-        width: 50%;
+        width: 33.3%;
     
   }
+  .feature-4,
+  .feature-5 {
+    width: 50%;
+  }
+ 
   .typeform {
     order: 2;
+    height: 200px;
   }
   .link {
     
@@ -238,17 +271,24 @@ img:hover {
         .feature-3 {
           width: 33.3%;
         }
+        .feature-4,
+        .feature-5 {
+          width: 50%;
+        }
+       
         .header {
           height: 400px;
         }
         .typeform {
             height: 200px;
             order: 2;
+            
         }
         .content {
             order: 1;
           
           }
+        
         .link {
           order:3
         }
